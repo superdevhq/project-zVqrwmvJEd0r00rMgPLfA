@@ -8,6 +8,9 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
+  DropdownMenuGroup,
+  DropdownMenuLabel
 } from "@/components/ui/dropdown-menu";
 
 export const Navbar = () => {
@@ -45,12 +48,93 @@ export const Navbar = () => {
             <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors">
               Use Cases <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem>
-                <Link to="/usecases/enterprise" className="w-full">Enterprise Teams</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/usecases/startups" className="w-full">Startups & SMBs</Link>
+            <DropdownMenuContent className="w-80">
+              <DropdownMenuLabel className="text-primary font-medium">By Organization Size</DropdownMenuLabel>
+              <DropdownMenuGroup>
+                <DropdownMenuItem className="py-2">
+                  <Link to="/usecases/enterprise" className="w-full flex items-center">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-2">
+                      <span className="text-primary font-semibold text-sm">E</span>
+                    </div>
+                    <div>
+                      <div className="font-medium">Enterprise Teams</div>
+                      <div className="text-xs text-muted-foreground">For large organizations with complex needs</div>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="py-2">
+                  <Link to="/usecases/startups" className="w-full flex items-center">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-2">
+                      <span className="text-primary font-semibold text-sm">S</span>
+                    </div>
+                    <div>
+                      <div className="font-medium">Startups & SMBs</div>
+                      <div className="text-xs text-muted-foreground">For growing businesses on a budget</div>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuGroup>
+              
+              <DropdownMenuSeparator />
+              
+              <DropdownMenuLabel className="text-primary font-medium">By Profession</DropdownMenuLabel>
+              <DropdownMenuGroup>
+                <DropdownMenuItem className="py-2">
+                  <Link to="/usecases/content-creators" className="w-full flex items-center">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-2">
+                      <span className="text-primary font-semibold text-sm">C</span>
+                    </div>
+                    <div>
+                      <div className="font-medium">Content Creators</div>
+                      <div className="text-xs text-muted-foreground">Streamline your content production workflow</div>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="py-2">
+                  <Link to="/usecases/entrepreneurs" className="w-full flex items-center">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-2">
+                      <span className="text-primary font-semibold text-sm">E</span>
+                    </div>
+                    <div>
+                      <div className="font-medium">Entrepreneurs</div>
+                      <div className="text-xs text-muted-foreground">Manage multiple ventures efficiently</div>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="py-2">
+                  <Link to="/usecases/accountants" className="w-full flex items-center">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-2">
+                      <span className="text-primary font-semibold text-sm">A</span>
+                    </div>
+                    <div>
+                      <div className="font-medium">Accountants & Finance</div>
+                      <div className="text-xs text-muted-foreground">Organize financial workflows and reporting</div>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="py-2">
+                  <Link to="/usecases/agencies" className="w-full flex items-center">
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-2">
+                      <span className="text-primary font-semibold text-sm">A</span>
+                    </div>
+                    <div>
+                      <div className="font-medium">Agencies & Consultants</div>
+                      <div className="text-xs text-muted-foreground">Manage client projects and deliverables</div>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuGroup>
+              
+              <DropdownMenuSeparator />
+              
+              <DropdownMenuItem className="py-2">
+                <Link to="/usecases" className="w-full text-primary font-medium flex items-center justify-center">
+                  View All Use Cases
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-1 h-4 w-4">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
