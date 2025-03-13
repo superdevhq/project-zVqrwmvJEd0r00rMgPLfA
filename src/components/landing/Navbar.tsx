@@ -56,9 +56,6 @@ export const Navbar = () => {
           </DropdownMenu>
           
           <Link to="/pricing" className="text-sm font-medium hover:text-primary transition-colors">Pricing</Link>
-          <a href="/#features" className="text-sm font-medium hover:text-primary transition-colors">Features</a>
-          <a href="/#testimonials" className="text-sm font-medium hover:text-primary transition-colors">Testimonials</a>
-          <a href="/#faq" className="text-sm font-medium hover:text-primary transition-colors">FAQ</a>
         </nav>
         
         <div className="flex items-center gap-4">
