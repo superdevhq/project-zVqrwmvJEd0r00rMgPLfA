@@ -36,7 +36,7 @@ export const Navbar = () => {
               <span className="text-primary-foreground font-bold text-lg">S</span>
             </div>
             <span className="font-bold text-2xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
-              SaaSify
+              SaaSify Pro
             </span>
           </Link>
         </div>
